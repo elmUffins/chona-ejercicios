@@ -1,0 +1,8 @@
+l:int = int(input("Ingrese su primer variable: "))
+k:int = int(input("Ingrese su segunda variable: "))
+n:int = int(input("Ingrese su divisor: "))
+
+i:str
+for i in range(l, k + 1):
+    if i % n == 0:
+        print(i)
