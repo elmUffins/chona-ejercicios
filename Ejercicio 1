@@ -1,6 +1,0 @@
-name = input("")
-contador = 0
-for i in name:
-  contador += 1
-
-print(f"Su nombre tiene {contador} letras.")
