@@ -1,3 +1,5 @@
+#Dado los números enteros l, k y n, mostrar por pantalla todos los números
+#divisibles por n en un rango de l hasta k
 l:int = int(input("Ingrese su primer variable: "))
 k:int = int(input("Ingrese su segunda variable: "))
 n:int = int(input("Ingrese su divisor: "))
@@ -5,4 +7,4 @@ n:int = int(input("Ingrese su divisor: "))
 i:str
 for i in range(l, k + 1):
     if i % n == 0:
-        print(i)
+        print(f"{i} es divisible por {n}.")
