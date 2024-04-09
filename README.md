@@ -1,4 +1,7 @@
 # Ejercicios con Chona
+
+## Ejercicios en Clase
+
 ### Ejercicio en clase 1:
 ```python
 #Dado un nombre, responde cuantos caracteres tiene
