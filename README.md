@@ -33,6 +33,7 @@ print(lisC)
 ```
 ### Ejercicio en clase 3: B
 ```python
+#Hacer lo mismo pero en 3 listas dentro de una lista
 lis: list[int] = [
     [1, 2, 3],
     [4, 5 ,6],
