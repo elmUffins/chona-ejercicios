@@ -2,14 +2,14 @@
 
 ## Ejercicios en Clase
 
-### Ejercicio en clase 1:
+### Ejercicio 1:
 ```python
 #Dado un nombre, responde cuantos caracteres tiene
 name:str = input("Ingrese su nombre: ")
 print(f"Su nombre tiene {len(name)} caracteres.")
 
 ```
-### Ejercicio en clase 2:
+### Ejercicio 2:
 ```python
 #Dado los números enteros l, k y n, mostrar por pantalla todos los números
 #divisibles por n en un rango de l hasta k
@@ -23,7 +23,7 @@ for i in range(l, k + 1):
         print(f"{i} es divisible por {n}.")
 ```
 
-### Ejercicio en clase 3: A
+### Ejercicio 3: A
 ```python
 #Dada una lista lis = [1, 2, 3, 4, 5]
 #crear una nueva lista que por cada
@@ -34,7 +34,7 @@ for i in lis:
     lisC.append(i*i)
 print(lisC)
 ```
-### Ejercicio en clase 3: B
+### Ejercicio 3: B
 ```python
 #Hacer lo mismo pero en 3 listas dentro de una lista
 lis: list[int] = [
