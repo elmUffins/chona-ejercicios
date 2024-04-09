@@ -1,5 +1,11 @@
 # Ejercicios con Chona
+### Ejercicio en clase 1:
+```python
+#Dado un nombre, responde cuantos caracteres tiene
+name:str = input("Ingrese su nombre: ")
+print(f"Su nombre tiene {len(name)} caracteres.")
 
+```
 ### Ejercicio en clase 2:
 ```python
 #Dado los números enteros l, k y n, mostrar por pantalla todos los números
