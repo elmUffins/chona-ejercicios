@@ -1,6 +1,20 @@
 # Ejercicios con Chona
 
-### Ejercicio 3: A
+### Ejercicio en clase 2:
+```python
+#Dado los números enteros l, k y n, mostrar por pantalla todos los números
+#divisibles por n en un rango de l hasta k
+l:int = int(input("Ingrese su primer variable: "))
+k:int = int(input("Ingrese su segunda variable: "))
+n:int = int(input("Ingrese su divisor: "))
+
+i:int
+for i in range(l, k + 1):
+    if i % n == 0:
+        print(f"{i} es divisible por {n}.")
+```
+
+### Ejercicio en clase 3: A
 ```python
 #Dada una lista lis = [1, 2, 3, 4, 5]
 #crear una nueva lista que por cada
@@ -11,7 +25,7 @@ for i in lis:
     lisC.append(i*i)
 print(lisC)
 ```
-### Ejercicio 3: B
+### Ejercicio en clase 3: B
 ```python
 lis: list[int] = [
     [1, 2, 3],
