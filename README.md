@@ -51,6 +51,12 @@ for lista in lis:
         lisC[lis.index(lista)].append(i**2)
 print(lisC)
 ```
+## Ejercicios de la Guía
+
+
+
+
+
 
 ### batalla naval todo choto
 ```python
