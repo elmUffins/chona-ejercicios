@@ -31,7 +31,7 @@ for i in range(l, k + 1):
 lis: list[int] = [1, 2, 3, 4, 5]
 lisC: list[int] = []
 for i in lis:
-    lisC.append(i*i)
+    lisC.append(i**2)
 print(lisC)
 ```
 ### Ejercicio 3: B
