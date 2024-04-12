@@ -67,15 +67,43 @@ for i in lista:
 ```
 ### Ejercicio 2
 ```python
+q = int(input("¿Cuántos números desea ingresar? "))
+lista: list[int] = []
+for i in range(q):
+    lista.append(int(input(f"Ingrese un número: ")))
 
+if lista != []:
+    print("El número mayor es:", max(lista))
+else:
+    print("No hay números en la lista.")
 ```
 ### Ejercicio 3
 ```python
+q = int(input("¿Cuántos números desea ingresar? "))
+lista: list[int] = []
+for i in range(q):
+    lista.append(int(input(f"Ingrese un número: ")))
 
+if lista != []:
+    print("El número menor es:", min(lista))
+else:
+    print("No hay números en la lista.")
 ```
 ### Ejercicio 4
 ```python
+q = int(input("¿Cuántos números desea ingresar? "))
+lista: list[int] = []
+for i in range(q):
+    lista.append(int(input(f"Ingrese un número: ")))
 
+total = 0
+for i in lista:
+    total += i
+
+if lista != []:
+    print(f"El promedio de los números ingresados es: {total / q}")
+else:
+    print("No hay números en la lista.")
 ```
 ### Ejercicio 5
 ```python
