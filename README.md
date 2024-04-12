@@ -1,5 +1,9 @@
 # Ejercicios con Chona
 
+### Alumno: Eric Gerzenstein
+
+### Curso: 4B TIC
+
 ## Ejercicios en Clase
 
 ### Ejercicio 1:
