@@ -53,7 +53,86 @@ print(lisC)
 ```
 ## Ejercicios de la Guía
 
+### Ejercicio 1
+```python
 
+```
+### Ejercicio 2
+```python
+
+```
+### Ejercicio 3
+```python
+
+```
+### Ejercicio 4
+```python
+
+```
+### Ejercicio 5
+```python
+
+```
+### Ejercicio 6
+```python
+
+```
+### Ejercicio 7
+```python
+
+```
+### Ejercicio 8
+```python
+
+```
+### Ejercicio 9
+```python
+
+```
+### Ejercicio 10
+```python
+
+```
+### Ejercicio 11
+```python
+
+```
+### Ejercicio 12
+```python
+
+```
+### Ejercicio 13
+```python
+
+```
+### Ejercicio 14
+```python
+
+```
+### Ejercicio 15
+```python
+
+```
+### Ejercicio 16
+```python
+
+```
+### Ejercicio 17
+```python
+
+```
+### Ejercicio 18
+```python
+
+```
+### Ejercicio 19
+```python
+
+```
+### Ejercicio 20
+```python
+
+```
 
 
 
