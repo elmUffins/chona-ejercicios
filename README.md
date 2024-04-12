@@ -55,7 +55,15 @@ print(lisC)
 
 ### Ejercicio 1
 ```python
+q = int(input("¿Cuántos números desea ingresar? "))
+lista: list[int] = []
+for i in range(q):
+    lista.append(int(input(f"Ingrese un número: ")))
 
+print(f"Su lista es: {lista}")
+for i in lista:
+    if i % 2 == 0 and i != 0:
+        print(f"El número {i} es par.")
 ```
 ### Ejercicio 2
 ```python
