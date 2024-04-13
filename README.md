@@ -107,7 +107,28 @@ else:
 ```
 ### Ejercicio 5
 ```python
+q = int(input("¿Cuántos números desea ingresar? "))
+lista: list[int] = []
+for i in range(q):
+    lista.append(int(input(f"Ingrese un número: ")))
 
+nums: list[int] = []
+
+for i in lista:
+    for x in lista:
+        if i % x == 0:
+            break
+        else:
+            nums.append(i)
+
+if len(nums) == 0 and len(lista) > 1:
+    print("No hay ningún número que cumpla la condición.")
+elif len(nums) == 0 and len(lista) == 1:
+    print(f"Solo se ha ingresado el número {lista[0]}.")
+elif len(lista) == 0:
+    print("0")
+else:
+    print(max(nums))
 ```
 ### Ejercicio 6
 ```python
