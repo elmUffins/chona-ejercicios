@@ -111,14 +111,15 @@ print(es_vocal(input("Ingrese una letra para averiguar si es o no vocal: ").lowe
 ```
 ### Ejercicio 9
 ```python
-def no_vocales(string):
-    for letra in string:
-        if ord(letra) == 97 or ord(letra) == 101 or ord(letra) == 105 or ord(letra) == 111 or ord(letra) == 117 \
-        or ord(letra) == 65 or ord(letra) == 69 or ord(letra) == 73 or ord(letra) == 79 or ord(letra) == 85:
-            string = string.replace(letra, "")
-    return string
+def remove_vowels(char):
+    if ord(char) in [97, 101, 105, 111, 117, 65, 69, 73, 79, 85]:
+        return ''
+    else:
+        return char
 
-print(list(no_vocales(input("Ingrese un string para eliminar las vocales: "))))
+string = input("Ingrese un string para eliminar las vocales: ")
+result = ''.join(map(remove_vowels, string))
+print(list(result))
 ```
 ### Ejercicio 10
 ```python
