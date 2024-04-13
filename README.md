@@ -153,9 +153,9 @@ filename = 'usuarios.csv'
 data = pd.read_csv(filename)
 
 average = (data['age'].sum() / data['age'].count())
-above_average = data["age"] < average
+below_average = data["age"] < average
 
-print(data[above_average]['name'])
+print(data[below_average]['name'])
 print(average)
 ```
 ### Ejercicio 11 - C
@@ -167,17 +167,47 @@ filename = 'usuarios.csv'
 data = pd.read_csv(filename)
 
 average = (data['age'].sum() / data['age'].count())
-above_average = data["age"] < average
-
 print(f"La edad promedio es de {average}")
 ```
 ### Ejercicio 11 - D
 ```python
+import pandas as pd
+import matplotlib.pyplot as plt
 
+pd.set_option('display.max_rows', None)
+filename = 'usuarios.csv'
+data = pd.read_csv(filename)
+
+plt.plot([i for i in data['age']])
+plt.ylabel('Edad')
+plt.xlabel('Usuarios')
+plt.show()
 ```
 ### Ejercicio 11 - E
 ```python
+import pandas as pd
 
+pd.set_option('display.max_rows', None)
+filename = 'usuarios.csv'
+data = pd.read_csv(filename)
+
+edad = int(input("Ingrese una edad: "))
+print(data[data['age'] == edad])
+```
+### Ejercicio 11 - F
+```python
+import pandas as pd
+
+pd.set_option('display.max_rows', None)
+filename = 'usuarios.csv'
+data = pd.read_csv(filename)
+
+name_age = ['name', 'age']
+average = (data['height(cm)'].sum() / data['height(cm)'].count())
+above_average = data["height(cm)"] > average
+
+print(data[above_average][name_age])
+print(average)
 ```
 ### Ejercicio 12
 ```python
