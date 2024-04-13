@@ -68,11 +68,15 @@ for i in range(q):
 nums: list[int] = []
 
 for i in lista:
+    divisible = False
     for x in lista:
-        if i % x == 0:
+        if i % x == 0 and i != x:
+            divisible = True
             break
         else:
             nums.append(i)
+    if not divisible:
+        nums.append(i)
 
 if len(nums) == 0 and len(lista) > 1:
     print("No hay ningún número que cumpla la condición.")
