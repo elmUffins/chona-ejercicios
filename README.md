@@ -211,7 +211,19 @@ print(average)
 ```
 ### Ejercicio 12
 ```python
+from PIL import Image
+def white_pixel_count(image):
+    width, height = image.size
+    white_pixel_count = 0
+    for x in range(width):
+        for y in range(height):
+            r, g, b = image.getpixel((x, y))
+            if r >= 200 and g >= 200 and b >= 200:
+                white_pixel_count += 1
+    return white_pixel_count
 
+image = Image.open('imagen.png')
+print(f'{white_pixel_count(image)} píxeles son blancos de un total de {image.width * image.height} píxeles.')
 ```
 ### Ejercicio 13
 ```python
