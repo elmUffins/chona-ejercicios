@@ -4,7 +4,7 @@
 
 ### Curso: 4B TIC
 
-## Ejercicios de la Guía
+## Ejercicios de la Guía - Funciones
 
 ### Ejercicio 1
 ```python
@@ -131,7 +131,32 @@ for i in range(len(lista)):
 
 print(nlista)
 ```
-### Ejercicio 11
+## Ejercicios de la Guía - Archivos
+
+### Ejercicio 11 - A
+```python
+import pandas as pd
+
+pd.set_option('display.max_rows', None)
+
+filename = 'usuarios.csv'
+data = pd.read_csv(filename)
+names = data['name']
+print(names)
+```
+### Ejercicio 11 - B
+```python
+
+```
+### Ejercicio 11 - C
+```python
+
+```
+### Ejercicio 11 - D
+```python
+
+```
+### Ejercicio 11 - E
 ```python
 
 ```
