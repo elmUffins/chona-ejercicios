@@ -107,11 +107,24 @@ print(es_vocal(input("Ingrese una letra para averiguar si es o no vocal: ").lowe
 ```
 ### Ejercicio 9
 ```python
+def no_vocales(string):
+    for letra in string:
+        if ord(letra) == 97 or ord(letra) == 101 or ord(letra) == 105 or ord(letra) == 111 or ord(letra) == 117 \
+        or ord(letra) == 65 or ord(letra) == 69 or ord(letra) == 73 or ord(letra) == 79 or ord(letra) == 85:
+            string = string.replace(letra, "")
+    return string
 
+print(list(no_vocales(input("Ingrese un string para eliminar las vocales: "))))
 ```
 ### Ejercicio 10
 ```python
+lista: list[list[int]] = [[1, 2], [3, 4], [5, 6]]
+nlista: list[list[int]] = [[], []]
+for i in range(len(lista)):
+    for x in range(len(lista[i])):
+        nlista[x].append(lista[i][x])
 
+print(nlista)
 ```
 ### Ejercicio 11
 ```python
