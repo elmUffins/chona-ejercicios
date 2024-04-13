@@ -146,11 +146,30 @@ print(names)
 ```
 ### Ejercicio 11 - B
 ```python
+import pandas as pd
 
+pd.set_option('display.max_rows', None)
+filename = 'usuarios.csv'
+data = pd.read_csv(filename)
+
+average = (data['age'].sum() / data['age'].count())
+above_average = data["age"] < average
+
+print(data[above_average]['name'])
+print(average)
 ```
 ### Ejercicio 11 - C
 ```python
+import pandas as pd
 
+pd.set_option('display.max_rows', None)
+filename = 'usuarios.csv'
+data = pd.read_csv(filename)
+
+average = (data['age'].sum() / data['age'].count())
+above_average = data["age"] < average
+
+print(f"La edad promedio es de {average}")
 ```
 ### Ejercicio 11 - D
 ```python
