@@ -132,15 +132,25 @@ else:
 ```
 ### Ejercicio 6
 ```python
-
+lista: list[list[int]] = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+nlista = [i for sublista in lista for i in sublista]
+print(nlista)
 ```
 ### Ejercicio 7
 ```python
-
+lista: list[list[int]] = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+nlista = [max(sublista) for sublista in lista]
+print(nlista)
 ```
 ### Ejercicio 8
 ```python
+def es_vocal(letra):
+    if ord(letra) == 97 or ord(letra) == 101 or ord(letra) == 105 or ord(letra) == 111 or ord(letra) == 117:
+        return True
+    else:
+        return False
 
+print(es_vocal(input("Ingrese una letra para averiguar si es o no vocal: ").lower()))
 ```
 ### Ejercicio 9
 ```python
