@@ -4,6 +4,8 @@
 
 ### Curso: 4B TIC
 
+### Profesor: Ignacio Pardo
+
 ## Ejercicios de la Guía - Funciones
 
 ### Ejercicio 1
