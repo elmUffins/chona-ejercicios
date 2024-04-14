@@ -6,6 +6,8 @@
 
 ### Profesor: Ignacio Pardo
 
+### Ejercicios: https://github.com/IgnacioPardo/Tecnologias_Exponenciales_2024/tree/main/Ejercicios
+
 ## Ejercicios de la Guía - Funciones
 
 ### Ejercicio 1
