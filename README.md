@@ -213,7 +213,7 @@ above_average = data["height(cm)"] > average
 print(data[above_average][name_age])
 print(average)
 ```
-### Ejercicio 12
+### Ejercicio 12 - A
 ```python
 from PIL import Image
 def white_pixel_count(image):
@@ -228,6 +228,42 @@ def white_pixel_count(image):
 
 image = Image.open('imagen.png')
 print(f'{white_pixel_count(image)} píxeles son blancos de un total de {image.width * image.height} píxeles.')
+```
+### Ejercicio 12 - B
+```python
+
+```
+### Ejercicio 12 - C
+```python
+
+```
+### Ejercicio 12 - D
+```python
+
+```
+### Ejercicio 12 - E
+```python
+
+```
+### Ejercicio 12 - F
+```python
+
+```
+### Ejercicio 12 - G
+```python
+
+```
+### Ejercicio 12 - H
+```python
+
+```
+### Ejercicio 12 - I
+```python
+
+```
+### Ejercicio 12 - J
+```python
+
 ```
 ### Ejercicio 13
 ```python
