@@ -346,21 +346,3 @@ for lista in lis:
 print(lisC)
 ```
 
-
-### batalla naval todo choto
-```python
-N = int(input("Ingrese el tamaño deseado del tablero: "))
-
-tablero: list[list[bool]] = \
-    [
-
-    ]
-
-for i in range (0, N):
-    espacio = []
-    tablero.append(espacio)
-    
-print(tablero)
-
-
-```
