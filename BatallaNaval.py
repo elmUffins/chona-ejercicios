@@ -1,5 +1,9 @@
 import time
 
+# Autores: Eric Gerzenstein, Joaquín García de García Teuly, Eitan Trajtman
+# Fecha de entrega: 26/04/24
+# Descripción: Batalla naval
+
 jugadorUno = input("Jugador 1, ingrese su nombre: ")
 jugadorDos = input("Jugador 2, ingrese su nombre: ")
 
@@ -22,7 +26,14 @@ tablero2: list[list[bool]] = \
 # ------------------------------ SECCIÓN PREPARACIÓN JUGADOR 1 ------------------------------
 
 print(f"{jugadorUno}, es tu turno")
-time.sleep(3)
+time.sleep(1)
+print(3)
+time.sleep(1)
+print(2)
+time.sleep(1)
+print(1)
+time.sleep(1)
+
 
 #Crear el tablero para el jugador 1
 for i in range(N):
@@ -44,6 +55,7 @@ while contador1 < cantidad_barcos:
         contador1 += 1
     else:
         print("Ya hay un barco en esa posición")
+        time.sleep(1)
     for fila in tablero:
         print(' '.join('B' if val else 'X' for val in fila))
 
@@ -69,6 +81,97 @@ while contador2 < cantidad_barcos:
         contador2 += 1
     else:
         print("Ya hay un barco en esa posición")
+        time.sleep(1)
     for fila in tablero2:
         print(' '.join('B' if val else 'X' for val in fila))
 
+# ------------------------------ SETUP DE JUEGO + LOOP PRINCIPAL ------------------------------
+
+#Tablero de ataque del jugador 1, replica el tablero del jugador 2
+# pero sin revelar la información de la ubicación de los barcos
+tableroDeAtaque: list[list[bool]] = \
+    [
+
+    ]
+
+for i in range(N):
+    fila = [False for x in range(N)]
+    tableroDeAtaque.append(fila)
+
+#Tablero de ataque del jugador 2, replica el tablero del jugador 1
+tableroDeAtaque2: list[list[bool]] = \
+    [
+
+    ]
+
+for i in range(N):
+    fila = [False for x in range(N)]
+    tableroDeAtaque2.append(fila)
+
+juegaJugador1 = True
+puntosJugador1 = 0
+puntosJugador2 = 0
+
+time.sleep(1)
+print("Empieza el juego.")
+time.sleep(3)
+
+#Loop principal
+while True:
+    if juegaJugador1:
+        F = int(input(f"{jugadorUno}, ingrese la fila de su ataque: "))
+        C = int(input(f"{jugadorUno}, ingrese la columna de su ataque: "))
+        if tablero2[F - 1][C - 1] == True:
+            tableroDeAtaque[F - 1][C - 1] = True
+            print("¡Le diste a un barco!")
+            time.sleep(1)
+            puntosJugador1 += 1
+            
+            #Condición de victoria
+            if puntosJugador1 == cantidad_barcos:
+                print(f"¡{jugadorUno} ha ganado!")
+                break
+                
+            print(f"Tablero de {jugadorDos}:")
+            time.sleep(1)
+            for fila in tableroDeAtaque:
+                print(' '.join('B' if val else 'X' for val in fila))
+            time.sleep(1)
+        else:
+            print("¡Fallaste!")
+            time.sleep(1)
+            print(f"La casilla {F}, {C} no tiene un barco")
+            
+            
+            
+            time.sleep(1)
+            for fila in tableroDeAtaque2:
+                print(' '.join('B' if val else 'X' for val in fila))
+        juegaJugador1 = False
+    else:
+        F = int(input(f"{jugadorDos}, ingrese la fila de su ataque: "))
+        C = int(input(f"{jugadorDos}, ingrese la columna de su ataque: "))
+        if tablero[F - 1][C - 1] == True:
+            tableroDeAtaque2[F - 1][C - 1] = True
+            print("¡Le diste a un barco!")
+            time.sleep(1)
+            puntosJugador2 += 1
+            
+            #Condición de victoria
+            if puntosJugador2 == cantidad_barcos:
+                print(f"¡{jugadorDos} ha ganado!")
+                break
+                
+            print(f"Tablero de {jugadorUno}:")
+            time.sleep(1)
+            for fila in tableroDeAtaque2:
+                print(' '.join('B' if val else 'X' for val in fila))
+            time.sleep(1)
+        else:
+            print("¡Fallaste!")
+            time.sleep(1)
+            print(f"La casilla {F}, {C} no tiene un barco")
+            time.sleep(1)
+            for fila in tableroDeAtaque2:
+                print(' '.join('B' if val else 'X' for val in fila))
+        juegaJugador1 = True
