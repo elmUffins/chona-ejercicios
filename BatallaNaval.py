@@ -1,4 +1,5 @@
 import time
+import os
 
 # Autores: Eric Gerzenstein, Joaquín García de García Teuly, Eitan Trajtman
 # Fecha de entrega: 26/04/24
@@ -7,7 +8,9 @@ import time
 jugadorUno = input("Jugador 1, ingrese su nombre: ")
 jugadorDos = input("Jugador 2, ingrese su nombre: ")
 
-N = int(input("Ingresen el tamaño deseado del tablero: "))
+N = int(input("Ingresen el tamaño deseado del tablero (número natural): "))
+os.system('cls' if os.name == 'nt' else 'clear')
+
 contador1 = 0
 contador2 = 0
 
@@ -33,7 +36,7 @@ print(2)
 time.sleep(1)
 print(1)
 time.sleep(1)
-
+os.system('cls' if os.name == 'nt' else 'clear')
 
 #Crear el tablero para el jugador 1
 for i in range(N):
@@ -43,12 +46,13 @@ for i in range(N):
 for fila in tablero: #Este for, utilizado varias veces a lo largo del código, imprime el tablero en la consola de una forma más lejible
     print(' '.join('X' if not val else str(val) for val in fila))
 
-cantidad_barcos = int(input(f"¿De a cuántos barcos desean jugar? ")) #¿Cuántos barcos quiero ingresar?
+cantidad_barcos = int(input(f"¿De a cuántos barcos desean jugar (número natural)? ")) #¿Cuántos barcos quiero ingresar?
+time.sleep(1)
 
 #¿Dónde los quiero ingresar?
 while contador1 < cantidad_barcos:
-    F = int(input("Ingrese la fila de su barco: "))
-    C = int(input("Ingrese la columna de su barco: "))
+    F = int(input(f"Ingrese la fila de su barco (del 1 al {N}): "))
+    C = int(input(f"Ingrese la columna de su barco (del 1 al {N}): "))
 
     if tablero[F - 1][C - 1] == False:
         tablero[F - 1][C - 1] = True
@@ -61,6 +65,7 @@ while contador1 < cantidad_barcos:
 
 # ------------------------------ SECCIÓN PREPARACIÓN JUGADOR 2 ------------------------------
 
+os.system('cls' if os.name == 'nt' else 'clear')
 print(f"{jugadorDos}, es tu turno")
 time.sleep(3)
 
@@ -73,8 +78,8 @@ for fila in tablero2:
 
 #¿Dónde los quiero ingresar?
 while contador2 < cantidad_barcos:
-    F = int(input("Ingrese la fila de su barco: "))
-    C = int(input("Ingrese la columna de su barco: "))
+    F = int(input(f"Ingrese la fila de su barco (del 1 al {N}): "))
+    C = int(input(f"Ingrese la columna de su barco (del 1 al {N}): "))
 
     if tablero2[F - 1][C - 1] == False:
         tablero2[F - 1][C - 1] = True
@@ -113,14 +118,15 @@ puntosJugador1 = 0
 puntosJugador2 = 0
 
 time.sleep(1)
+os.system('cls' if os.name == 'nt' else 'clear')
 print("Empieza el juego.")
 time.sleep(3)
 
 #Loop principal
 while True:
     if juegaJugador1:
-        F = int(input(f"{jugadorUno}, ingrese la fila de su ataque: "))
-        C = int(input(f"{jugadorUno}, ingrese la columna de su ataque: "))
+        F = int(input(f"{jugadorUno}, ingrese la fila de su ataque (del 1 al {N}): "))
+        C = int(input(f"{jugadorUno}, ingrese la columna de su ataque (del 1 al {N}): "))
 
         if tablero2[F - 1][C - 1] == True:
             tableroDeAtaque[F - 1][C - 1] = True
@@ -130,6 +136,7 @@ while True:
 
             #Condición de victoria
             if puntosJugador1 == cantidad_barcos:
+                os.system('cls' if os.name == 'nt' else 'clear')
                 print(f"¡{jugadorUno} ha ganado!")
                 break
 
@@ -153,8 +160,8 @@ while True:
         juegaJugador1 = False
 
     else:
-        F = int(input(f"{jugadorDos}, ingrese la fila de su ataque: "))
-        C = int(input(f"{jugadorDos}, ingrese la columna de su ataque: "))
+        F = int(input(f"{jugadorDos}, ingrese la fila de su ataque (del 1 al {N}): "))
+        C = int(input(f"{jugadorDos}, ingrese la columna de su ataque (del 1 al {N}): "))
 
         if tablero[F - 1][C - 1] == True:
             tableroDeAtaque2[F - 1][C - 1] = True
@@ -164,6 +171,7 @@ while True:
 
             #Condición de victoria
             if puntosJugador2 == cantidad_barcos:
+                os.system('cls' if os.name == 'nt' else 'clear')
                 print(f"¡{jugadorDos} ha ganado!")
                 break
 
