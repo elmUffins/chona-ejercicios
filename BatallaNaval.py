@@ -121,57 +121,64 @@ while True:
     if juegaJugador1:
         F = int(input(f"{jugadorUno}, ingrese la fila de su ataque: "))
         C = int(input(f"{jugadorUno}, ingrese la columna de su ataque: "))
+
         if tablero2[F - 1][C - 1] == True:
             tableroDeAtaque[F - 1][C - 1] = True
             print("¡Le diste a un barco!")
             time.sleep(1)
             puntosJugador1 += 1
-            
+
             #Condición de victoria
             if puntosJugador1 == cantidad_barcos:
                 print(f"¡{jugadorUno} ha ganado!")
                 break
-                
+
             print(f"Tablero de {jugadorDos}:")
             time.sleep(1)
-            for fila in tableroDeAtaque:
-                print(' '.join('B' if val else 'X' for val in fila))
+            for i in range(N):
+                #Muestra B, 0 o X dependiendo de si le diste a un barco, si no le diste a un barco o si no atacaste esa casilla
+                #Se usa para representar el tablero a lo largo del juego
+                print(' '.join('B' if tableroDeAtaque[i][j] and tablero2[i][j] else 'O' if tableroDeAtaque[i][j] else 'X' for j in range(N)))
             time.sleep(1)
+
         else:
             print("¡Fallaste!")
             time.sleep(1)
             print(f"La casilla {F}, {C} no tiene un barco")
-            
-            
-            
+            tableroDeAtaque[F - 1][C - 1] = True
+
             time.sleep(1)
-            for fila in tableroDeAtaque2:
-                print(' '.join('B' if val else 'X' for val in fila))
+            for i in range(N):
+                print(' '.join('B' if tableroDeAtaque[i][j] and tablero2[i][j] else 'O' if tableroDeAtaque[i][j] else 'X' for j in range(N)))
         juegaJugador1 = False
+
     else:
         F = int(input(f"{jugadorDos}, ingrese la fila de su ataque: "))
         C = int(input(f"{jugadorDos}, ingrese la columna de su ataque: "))
+
         if tablero[F - 1][C - 1] == True:
             tableroDeAtaque2[F - 1][C - 1] = True
             print("¡Le diste a un barco!")
             time.sleep(1)
             puntosJugador2 += 1
-            
+
             #Condición de victoria
             if puntosJugador2 == cantidad_barcos:
                 print(f"¡{jugadorDos} ha ganado!")
                 break
-                
+
             print(f"Tablero de {jugadorUno}:")
             time.sleep(1)
-            for fila in tableroDeAtaque2:
-                print(' '.join('B' if val else 'X' for val in fila))
+            for i in range(N):
+                print(' '.join('B' if tableroDeAtaque2[i][j] and tablero[i][j] else 'O' if tableroDeAtaque2[i][j] else 'X' for j in range(N)))
             time.sleep(1)
+
         else:
             print("¡Fallaste!")
             time.sleep(1)
             print(f"La casilla {F}, {C} no tiene un barco")
+            tableroDeAtaque2[F - 1][C - 1] = True
             time.sleep(1)
-            for fila in tableroDeAtaque2:
-                print(' '.join('B' if val else 'X' for val in fila))
+            for i in range(N):
+                print(' '.join('B' if tableroDeAtaque2[i][j] and tablero[i][j] else 'O' if tableroDeAtaque2[i][j] else 'X' for j in range(N)))
         juegaJugador1 = True
