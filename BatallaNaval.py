@@ -1,6 +1,6 @@
 import time  # Usamos time.sleep() para poder hacer la experiencia más agradable
 import random # Usamos random.randint() para poder generar números aleatorios para las posiciones de los barcos
-import os  # Usamos os para poder
+import os  # Usamos os para poder limpiar la consola
 
 # Autores: Eric Gerzenstein, Joaquín García de García Teuly, Eitan Trajtman
 # Fecha de entrega: 26/04/24
