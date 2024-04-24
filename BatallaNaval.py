@@ -330,7 +330,7 @@ while True:
 
         print(f"Prepárate para jugar, {jugador}.")
         time.sleep(1)
-        print(f"Tendrás un máximo de {2 * N} disparos para hundir todos los barcos.")
+        print(f"Tendrás un máximo de {3 * N} disparos para hundir todos los barcos.")
         print(3)
         time.sleep(1)
         print(2)
@@ -341,7 +341,7 @@ while True:
 
         puntos = 0
         disparos = 0
-        limit = 2 * N
+        limit = 3 * N
 
         while True:
             F = int(input(f"{jugador}, ingrese la fila de su ataque (del 1 al {N}): "))
