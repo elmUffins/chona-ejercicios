@@ -298,8 +298,8 @@ while True:
         espacios_totales = 0
         # Ubicación autónoma de los barcos
         while contador < cantidad_barcos:
-            F = random.randint(1, N)
-            C = random.randint(1, N)
+            F = random.randint(1, N - 1)
+            C = random.randint(1, N - 1)
             S = random.randint(1, 3)
             D = random.randint(0, 1)
 
