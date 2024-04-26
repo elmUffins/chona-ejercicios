@@ -19,7 +19,12 @@ while True:
         jugadorUno = input("Jugador 1, ingrese su nombre: ")
         jugadorDos = input("Jugador 2, ingrese su nombre: ")
 
-        N = int(input("Ingresen el tamaño deseado del tablero (número natural): "))
+        while True:
+            N = int(input("Ingresen el tamaño deseado del tablero (número natural mayor a 2)"))
+            if N < 3:
+                print("Ingresen un número mayor a 2")
+            else:
+                break
         os.system('cls' if os.name == 'nt' else 'clear')  # A lo largo del código limpia la consola
 
         contador1:int = 0
@@ -262,7 +267,13 @@ while True:
 
     elif modo == 1:
         jugador = input("Ingrese su nombre: ")
-        N = int(input("Ingrese el tamaño deseado del tablero (número natural)"))
+        
+        while True:
+            N = int(input("Ingrese el tamaño deseado del tablero (número natural mayor a 2)"))
+            if N < 3:
+                print("Ingrese un número mayor a 2")
+            else:
+                break
 
         tablero: list[list[bool]] = \
             [
