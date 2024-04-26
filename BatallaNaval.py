@@ -303,7 +303,12 @@ while True:
                 break
 
         time.sleep(1)
-        print(f"Habrán {cantidad_barcos} barcos en el tablero, los cuales pueden ocupar entre 1 a 3 casillas.")
+
+        if cantidad_barcos == 1:
+            print(f"Habrá {cantidad_barcos} barco en el tablero, el cual puede ocupar entre 1 a 3 casillas.")
+        else:
+            print(f"Habrán {cantidad_barcos} barcos en el tablero, los cuales pueden ocupar entre 1 a 3 casillas.")
+        
         contador = 0
 
         espacios_totales = 0
