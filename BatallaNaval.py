@@ -344,9 +344,11 @@ while True:
             fila = [False for x in range(N)]
             tableroDeAtaque.append(fila)
 
+        time.sleep(3)
         print(f"Prepárate para jugar, {jugador}.")
         time.sleep(1)
         print(f"Tendrás un máximo de {3 * N} disparos para hundir todos los barcos.")
+        time.sleep(2)
         print(3)
         time.sleep(1)
         print(2)
