@@ -182,7 +182,7 @@ pd.set_option('display.max_rows', None)
 filename = 'usuarios.csv'
 data = pd.read_csv(filename)
 
-plt.plot([i for i in data['age']])
+plt.hist([i for i in data['age']])
 plt.ylabel('Edad')
 plt.xlabel('Usuarios')
 plt.show()
