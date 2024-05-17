@@ -183,8 +183,8 @@ filename = 'usuarios.csv'
 data = pd.read_csv(filename)
 
 plt.hist([i for i in data['age']])
-plt.ylabel('Edad')
-plt.xlabel('Usuarios')
+plt.ylabel('Usuarios')
+plt.xlabel('Edad')
 plt.show()
 ```
 ### Ejercicio 11 - E
