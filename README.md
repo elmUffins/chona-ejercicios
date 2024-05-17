@@ -106,7 +106,7 @@ print(nlista)
 ### Ejercicio 8
 ```python
 def es_vocal(letra):
-    if ord(letra) == 97 or ord(letra) == 101 or ord(letra) == 105 or ord(letra) == 111 or ord(letra) == 117:
+    if ord(letra) in [97, 101, 105, 111, 117]:
         return True
     else:
         return False
